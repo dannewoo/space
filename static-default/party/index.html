@@ -163,6 +163,218 @@ const buildGlRoom = (canvas, config) => {
     }
   }
 
+  var data = [
+    { 
+      name: 'Biden',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Joe_Biden_2013.jpg',
+      pop: 73762036, 
+      electoral: 279,
+      num: 0
+    },
+    { 
+      name: 'Trump',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Donald_Trump_official_portrait_%28cropped%29.jpg',
+      pop: 69646219, 
+      electoral: 214,
+      num: 0
+    },
+    { 
+      name: 'Jorgensen',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/8/83/Jo_Jorgensen_by_Gage_Skidmore_3_%2850448627641%29.jpg',
+      pop: 1675869, 
+      electoral: 0,
+      num: 0
+    },
+    { 
+      name: 'Clinton',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Hillary_Clinton_by_Gage_Skidmore_2.jpg',
+      pop: 65844969, 
+      electoral: 227,
+      num: 1
+    },
+    { 
+      name: 'Trump',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Donald_Trump_official_portrait_%28cropped%29.jpg',
+      pop: 62979984, 
+      electoral: 304,
+      num: 1
+    },
+    { 
+      name: 'Johnson',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Gary_Johnson_April_2016_Portrait_Black_Background.jpg',
+      pop: 4492919, 
+      electoral: 0,
+      num: 1
+    },
+    { 
+      name: 'Obama',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/5/55/President_Barack_Obama%2C_2012_portrait_crop.jpg',
+      pop: 65915795, 
+      electoral: 332,
+      num: 2
+    },
+    { 
+      name: 'Romney',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Mitt_Romney_by_Gage_Skidmore_8.jpg',
+      pop: 60933504, 
+      electoral: 206,
+      num: 2
+    },
+    { 
+      name: 'Johnson',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Gary_Johnson_April_2016_Portrait_Black_Background.jpg',
+      pop: 1275971, 
+      electoral: 0,
+      num: 2
+    },
+    { 
+      name: 'Obama',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/5/55/President_Barack_Obama%2C_2012_portrait_crop.jpg',
+      pop: 69498516, 
+      electoral: 365,
+      num: 3
+    },
+    { 
+      name: 'McCain',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/John_McCain_2009_Official.jpg',
+      pop: 59948323, 
+      electoral: 173,
+      num: 3
+    },
+    { 
+      name: 'Nader',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ralph_Nader_%288136349614%29_%28cropped%29.jpg',
+      pop: 739034, 
+      electoral: 0,
+      num: 3
+    },
+    { 
+      name: 'Bush',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg',
+      pop: 62040610, 
+      electoral: 286,
+      num: 4
+    },
+    { 
+      name: 'Kerry',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/6/62/John_F._Kerry.jpg',
+      pop: 59028444, 
+      electoral: 251,
+      num: 4
+    },
+    { 
+      name: 'Nader',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ralph_Nader_%288136349614%29_%28cropped%29.jpg',
+      pop: 465650, 
+      electoral: 0,
+      num: 4
+    },
+    { 
+      name: 'Gore',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Al_Gore%2C_Vice_President_of_the_United_States%2C_official_portrait_1994.jpg',
+      pop: 50999897, 
+      electoral: 266,
+      num: 5
+    },
+    { 
+      name: 'Bush',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg',
+      pop: 50456002, 
+      electoral: 271,
+      num: 5
+    },
+    { 
+      name: 'Nader',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ralph_Nader_%288136349614%29_%28cropped%29.jpg',
+      pop: 2882955, 
+      electoral: 0,
+      num: 5
+    },
+    { 
+      name: 'Clinton',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg',
+      pop: 47401185, 
+      electoral: 379,
+      num: 6
+    },
+    { 
+      name: 'Dole',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Bob_Dole%2C_PCCWW_photo_portrait.JPG',
+      pop: 39197469, 
+      electoral: 159,
+      num: 6
+    },
+    { 
+      name: 'Perot',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/RossPerotColor.jpg',
+      pop: 8085294, 
+      electoral: 0,
+      num: 6
+    },
+    { 
+      name: 'Clinton',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg',
+      pop: 44909889, 
+      electoral: 370,
+      num: 7
+    },
+    { 
+      name: 'Bush',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/George_H._W._Bush_presidential_portrait_%28cropped_2%29.jpg',
+      pop: 39104550, 
+      electoral: 168,
+      num: 7
+    },
+    { 
+      name: 'Perot',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/f/fd/RossPerotColor.jpg',
+      pop: 19743821, 
+      electoral: 0,
+      num: 7
+    },
+    { 
+      name: 'Bush',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/George_H._W._Bush_presidential_portrait_%28cropped_2%29.jpg',
+      pop: 48886597, 
+      electoral: 426,
+      num: 8
+    },
+    { 
+      name: 'Dukakis',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/1988_Dukakis.jpg',
+      pop: 41809074, 
+      electoral: 111,
+      num: 8
+    },
+    { 
+      name: 'Paul',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Ron_Paul_by_Gage_Skidmore_3_%28crop_1%29.jpg',
+      pop: 431750, 
+      electoral: 0,
+      num: 8
+    }
+  ];
+  var num = 0;
+  const updateHeads = [];
+  const divider = 3000000;
+  for (let i = 0; i < data.length; i++) {
+    const texture = new THREE.TextureLoader().load( data[i].img );
+    const presHead = new THREE.BoxGeometry( data[i].pop/divider, data[i].pop/divider, data[i].pop/divider );
+    const head = new THREE.Mesh(
+      presHead,
+      new THREE.MeshBasicMaterial( {map: texture} ));
+    updateHeads.push((now, byteFreqData) => {
+      head.rotation.y += data[i].electoral/10000;
+    });
+    if(i%3 == 0) {
+      num += (data[i].pop/divider) - 3;
+    }
+    head.position.y = num - 13;
+    head.position.x = 100;
+    head.position.z = 0;
+    scene.add(head);
+  }
+
   const floor = new THREE.Mesh(
     new THREE.CircleBufferGeometry(100000),
     new THREE.MeshPhongMaterial( {
@@ -486,6 +698,7 @@ const buildGlRoom = (canvas, config) => {
     }
 
     updateBalloons.forEach(f => f(now, byteFreqData));
+    updateHeads.forEach(f => f(now, byteFreqData));
 
     renderer.render(scene, camera);
   };
